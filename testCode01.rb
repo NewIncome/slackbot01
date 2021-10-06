@@ -3,10 +3,13 @@ require 'json'
 
 # rc = HTTP.post("https://slack.com/api/api.test") # test01
 # test02
-rc = HTTP.post("https://slack.com/api/auth.test", params: {
-  token: ENV['SLACK_API_TOKEN_01'] # App-Level-Token
+# rc = HTTP.post("https://slack.com/api/auth.test", params: {
+  # token: ENV['SLACK_API_TOKEN_01'] # App-Level-Token
   # token: ENV['SLACK_API_VERIF_TOKEN_01']
-})
+#   token: ENV['SLACK_BOT_USER_OAUTH_TOKEN_01']
+# })
+header = { params: { token: ENV['SLACK_BOT_USER_OAUTH_TOKEN_01'] } }
+rc = HTTP.post("https://slack.com/api/auth.test", header)
 #rc = HTTP.post("https://slack.com/api/oauth.access", params: {
 #  client_id: ENV['SLACK_API_CID_01'],
 #  client_secret: ENV['SLACK_API_CSCRT_01']

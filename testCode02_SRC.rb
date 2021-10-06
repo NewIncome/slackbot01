@@ -9,6 +9,8 @@ end
 client = Slack::Web::Client.new
 resp = client.auth_test
 
+client.chat_postMessage(channel: '#for-bot', text: 'Hello World', as_user: true)
+
 # client = OAuth2::Client.new(
 #   ENV['SLACK_API_CID_01'],
 #   ENV['SLACK_API_CSCRT_01'],
@@ -19,9 +21,8 @@ puts "Test"
 puts "Client:"
 # puts JSON.parse(resp)
 puts resp
-puts resp.keys
-# puts client.state
+# puts resp.keys
+puts resp.state
 puts resp.class.name
-puts resp.body
-puts resp.message
-puts resp.messages
+o1 = Hash.new(resp)
+puts o1

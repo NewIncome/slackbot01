@@ -36,8 +36,18 @@ GEM
     fiber-local (1.0.0)
     gli (2.20.1)
     hashie (4.1.0)
+    jwt (2.3.0)
+    multi_json (1.15.0)
+    multi_xml (0.6.0)
     multipart-post (2.1.1)
     nio4r (2.5.8)
+    oauth2 (1.4.7)
+      faraday (>= 0.8, < 2.0)
+      jwt (>= 1.0, < 3.0)
+      multi_json (~> 1.3)
+      multi_xml (~> 0.5)
+      rack (>= 1.2, < 3)
+    rack (2.2.3)
     ruby2_keywords (0.0.5)
     slack-ruby-client (0.17.0)
       faraday (>= 1.0)
@@ -55,6 +65,7 @@ PLATFORMS
 
 DEPENDENCIES
   async-websocket (~> 0.8.0)
+  oauth2
   slack-ruby-client
 
 BUNDLED WITH

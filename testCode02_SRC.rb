@@ -1,13 +1,14 @@
 require 'slack-ruby-client'
+require 'oauth2'
 
-Slack.configure do |config|
-  # config.token = ENV['SLACK_API_TOKEN_01']
-  config.token = ENV['SLACK_API_VERIF_TOKEN_01']
-end
-
-client = Slack::Web::Client.new
-client.auth_test
+client = OAuth2::Client.new(
+  ENV['SLACK_API_CID_01'],
+  ENV['SLACK_API_CSCRT_01'],
+  site: 'https://slack.com/api/oauth.v2.access'
+)
 
 puts "Test"
 puts "Client:"
 puts client
+puts client.state
+# puts client.class.name

@@ -53,3 +53,13 @@ all_members.members.each do |member|
   # block_question = "This is a test"
   # client.chat_postMessage(channel: member.id, text: 'Good Morning!!', as_user: true)
 end
+
+# # for bttn-action with Sinatra, use this code:
+# post '/' do
+#   request_data = request.body.read
+#   request_data = URI.decode_www_form_component(request_data, enc = Enconding::UTF_8)
+#   request_data = JSON.parse(request_data.sub!('payload=', ''))
+#   client.chat_postMessage(channel: member.id, text: 'Marcaste  :)', as_user: true)
+#   status 200
+#   body ''
+# end

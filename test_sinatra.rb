@@ -13,4 +13,14 @@ class HiSinatra < Sinatra::Base
   get '/' do
     "Hello World (& Sinatra!)"
   end
+
+  get '/test0' do
+    "Welcome to testing mode"
+  end
+
+  get '/:age' do
+    "Hi, let me guess your age" +
+    "\n...\n...\n...\n" +
+    "You age is #{params[:age]}"
+  end
 end

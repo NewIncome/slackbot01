@@ -21,6 +21,6 @@ class HiSinatra < Sinatra::Base
   get '/:age' do
     "Hi, let me guess your age" +
     "\n...\n...\n...\n" +
-    "You age is #{params[:age]}"
+    "Your age is #{params[:age]}"
   end
 end
